@@ -1,0 +1,116 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: "BebasNeue";  
+        src: url("../fonts/BebasNeue-Regular.ttf") format("truetype"); 
+        font-style: normal; 
+        font-weight: normal;
+    }
+    
+    @font-face {
+        font-family: 'Maax';
+        src: url('../fonts/Maax-Medium.eot');
+        src: local('Maax Medium'), local('Maax-Medium'),
+            url('../fonts/Maax-Medium.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Maax-Medium.woff') format('woff'),
+            url('../fonts/Maax-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Maax';
+        src: url('../fonts/Maax-Italic.eot');
+        src: local('Maax Italic'), local('Maax-Italic'),
+            url('../fonts/Maax-Italic.eot?#iefix') format('embedded-opentype'),
+            url('..c/fonts/Maax-Italic.woff') format('woff'),
+            url('../fonts/Maax-Italic.ttf') format('truetype');
+        font-weight: normal;
+        font-style: italic;
+    }
+    
+    @font-face {
+        font-family: 'Maax';
+        src: url('../fonts/Maax-BoldItalic.eot');
+        src: local('Maax BoldItalic'), local('Maax-BoldItalic'),
+            url('../fonts/Maax-BoldItalic.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Maax-BoldItalic.woff') format('woff'),
+            url('../fonts/Maax-BoldItalic.ttf') format('truetype');
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    @font-face {
+        font-family: 'Maax';
+        src: url('../fonts/Maax-Black.eot');
+        src: local('Maax Black'), local('Maax-Black'),
+            url('../fonts/Maax-Black.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Maax-Black.woff') format('woff'),
+            url('../fonts/Maax-Black.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Maax';
+        src: url('../fonts/Maax.eot');
+        src: local('Maax'),
+            url('../fonts/Maax.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Maax.woff') format('woff'),
+            url('../fonts/Maax.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Maax';
+        src: url('../fonts/Maax-Bold.eot');
+        src: local('Maax Bold'), local('Maax-Bold'),
+            url('../fonts/Maax-Bold.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Maax-Bold.woff') format('woff'),
+            url('../fonts/Maax-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Maax';
+        src: url('../fonts/Maax-Mediumitalic.eot');
+        src: local('Maax MediumItalic'), local('Maax-Mediumitalic'),
+            url('../fonts/Maax-Mediumitalic.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Maax-Mediumitalic.woff') format('woff'),
+            url('../fonts/Maax-Mediumitalic.ttf') format('truetype');
+        font-weight: 500;
+        font-style: italic;
+    }
+    *{
+        font-family: 'Maax';
+    }
+    h1, h2, h3{
+        font-family: 'BebasNeue';
+    }
+}
+@layer components{
+    .container{
+        @apply max-w-7xl;
+    }
+    .menu-item{
+        @apply relative text-white text-xl sm:text-base font-medium after:h-0 after:w-0 after:transition-all after:content-[""] after:absolute after:top-1/2 after:left-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:bg-white after:rounded-full after:opacity-30;
+    }
+    .menu-item.active, .menu-item:hover{
+        @apply   after:h-10 after:w-10  ;
+    }
+    .p-text-bigger{
+        @apply  text-2xl b-lg:text-xl sm:text-lg;
+    }
+    .yearItem{
+        @apply cursor-pointer text-right text-base opacity-40 pr-7 mb-4 relative transition-all after:content-[""] after:absolute after:right-0 after:top-3 after:h-px after:w-4 after:bg-[#423A2C] after:opacity-40;
+    }
+    .yearItem.active{
+        @apply  mb-6 pr-10 opacity-100 text-redBrighter text-3xl font-medium after:top-4 after:h-1 after:w-8 after:bg-redBrighter after:opacity-100
+    }
+}
