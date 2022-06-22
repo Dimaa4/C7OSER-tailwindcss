@@ -21,7 +21,9 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "homePageMain" : "url('../img/people.png')"
+        "contentGroups" : "url('../img/groupbg.png')",
+        "homePageMain" : "url('../img/people.png')",
+        
       },
       keyframes: {
         yearCardAppearLeft: {
